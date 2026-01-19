@@ -11,25 +11,25 @@ export function ServicesPage() {
       icon: Users,
       title: t('services.digitalnomad'),
       description: t('services.digitalnomad.desc'),
-      details: 'Full documentation assistance, case preparation, legal support throughout the process.',
+      details: t('services.digitalnomad.details'),
     },
     {
       icon: Briefcase,
       title: t('services.startup'),
       description: t('services.startup.desc'),
-      details: 'Business plan development, pitch preparation, regulatory compliance, team visa support.',
+      details: t('services.startup.details'),
     },
     {
       icon: FileText,
       title: t('services.consultation'),
       description: t('services.consultation.desc'),
-      details: 'One-on-one expert consultation, document review, eligibility assessment.',
+      details: t('services.consultation.details'),
     },
     {
       icon: Globe,
       title: t('services.translation'),
       description: t('services.translation.desc'),
-      details: 'Certified translations, apostille services, document legalization.',
+      details: t('services.translation.details'),
     },
   ];
 
@@ -58,7 +58,9 @@ export function ServicesPage() {
                   <CardDescription className="text-base">{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-700 dark:text-slate-300 mb-6">{service.details}</p>
+                  <p className="text-slate-700 dark:text-slate-300 mb-6">
+                    {service.details}
+                    </p>
                   <Button className="w-full">{t('cta.consultation')}</Button>
                 </CardContent>
               </Card>

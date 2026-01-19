@@ -51,12 +51,16 @@ const translations = {
     'services.title': 'Our Services',
     'services.digitalnomad': 'Digital Nomad Residence Permit',
     'services.digitalnomad.desc': 'Complete assistance with obtaining residence permits for remote workers',
+    'services.digitalnomad.details': 'Full documentation assistance, case preparation, legal support throughout the process.',
     'services.startup': 'Startup Visa',
     'services.startup.desc': 'Business plan preparation, project submission, residence permits for the whole team',
+    'services.startup.details' : 'Business plan development, pitch preparation, regulatory compliance, team visa support.',
     'services.consultation': 'Personal Consultation',
     'services.consultation.desc': 'Case analysis and document audit',
+    'services.consultation.details': 'One-on-one expert consultation, document review, eligibility assessment.',
     'services.translation': 'Certificates and Sworn Translations',
     'services.translation.desc': 'Professional translation services for legal documents',
+    'services.translation.details': 'Certified translations, apostille services, document legalization.',
     
     // Countries
     'countries.title': 'Countries',
@@ -130,12 +134,17 @@ const translations = {
     'services.title': 'Наши услуги',
     'services.digitalnomad': 'ВНЖ Digital Nomad',
     'services.digitalnomad.desc': 'Полное сопровождение получения ВНЖ для удалённых работников',
+    'services.digitalnomad.details': 'Полная помощь в оформлении документов, подготовка дела, юридическая поддержка на протяжении всего процесса.',
     'services.startup': 'Startup-виза',
     'services.startup.desc': 'Подготовка бизнес-плана, подача проекта, ВНЖ для всей команды',
+    'services.startup.details' : 'Разработка бизнес-плана, подготовка презентаций, соблюдение нормативных требований, визовая поддержка команды.',
     'services.consultation': 'Персональная консультация',
     'services.consultation.desc': 'Разбор кейса и аудит документов',
+    'services.consultation.details': 'Индивидуальная консультация эксперта, анализ документов, оценка соответствия критериям.',
     'services.translation': 'Справки и переводы jurado',
     'services.translation.desc': 'Профессиональные переводы юридических документов',
+    'services.translation.details': 'Заверенные переводы, услуги апостиля, легализация документов.',
+
     
     // Countries
     'countries.title': 'Страны',
