@@ -47,7 +47,6 @@ export function Header() {
               <Link to="/consultation">{t('cta.consultation')}</Link>
             </Button>
 
-            {/* Language Switcher */}
             <div className="flex items-center gap-1 border rounded-lg p-1 dark:border-slate-700">
               <button
                 onClick={() => setLanguage('en')}
