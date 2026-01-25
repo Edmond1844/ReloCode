@@ -10,6 +10,7 @@ import { BlogPage } from '@/app/pages/BlogPage';
 import { VideosPage } from '@/app/pages/VideosPage';
 import { AboutPage } from '@/app/pages/AboutPage';
 import { ContactsPage } from '@/app/pages/ContactsPage';
+import { DocumentsPage } from '@/app/pages/DocumentsPage';
 
 export default function App() {
   return (
@@ -23,11 +24,12 @@ export default function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/countries" element={<CountriesPage />} />
-                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog::slug" element={<BlogPage />} />
                 <Route path="/videos" element={<VideosPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contacts" element={<ContactsPage />} />
                 <Route path="/consultation" element={<ContactsPage />} />
+                <Route path="/documents" element={<DocumentsPage />} />
               </Routes>
             </main>
             <Footer />

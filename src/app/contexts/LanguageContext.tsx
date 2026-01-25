@@ -18,6 +18,7 @@ const translations = {
     'nav.about': 'About',
     'nav.contacts': 'Contacts',
     'cta.consultation': 'Free Consultation',
+    'nav.documents': 'Documents',
     
     // Hero
     'hero.title': 'We help you obtain residence permits in Europe and America',
@@ -101,6 +102,7 @@ const translations = {
     'nav.about': 'О нас',
     'nav.contacts': 'Контакты',
     'cta.consultation': 'Бесплатная консультация',
+    'nav.documents': 'Документы',
     
     // Hero
     'hero.title': 'Помогаем получить вид на жительство в Европе и Америке',

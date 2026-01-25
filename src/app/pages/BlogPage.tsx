@@ -1,7 +1,9 @@
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/app/components/ui/card';
 import { Button } from '@/app/components/ui/button';
+import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight } from 'lucide-react';
+
 
 export function BlogPage() {
   const { t } = useLanguage();
@@ -72,10 +74,13 @@ export function BlogPage() {
                 <CardDescription>{article.excerpt}</CardDescription>
               </CardHeader>
               <CardFooter className="mt-auto">
-                <Button variant="ghost" className="w-full justify-between">
+                {/* <button variant="ghost" >
+
+                </button> */}
+                <Link className="w-full justify-between">
                   Read More
                   <ArrowRight className="w-4 h-4" />
-                </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}

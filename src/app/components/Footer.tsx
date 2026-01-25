@@ -3,8 +3,20 @@ import { useLanguage } from '@/app/contexts/LanguageContext';
 import { Youtube, Send, MessageCircle } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 
+
 export function Footer() {
   const { t } = useLanguage();
+
+    const navFooterLinks = [
+    { to: '/services', label: t('nav.services') },
+    { to: '/countries', label: t('nav.countries') },
+    { to: '/blog', label: t('nav.blog') },
+    { to: '/videos', label: t('nav.videos') },
+    { to: '/about', label: t('nav.about') },
+    { to: '/contacts', label: t('nav.contacts') },
+    { to: '/documents', label: t('nav.documents') },
+  ];
+
 
   return (
     <footer className="bg-slate-100 dark:bg-slate-900 border-t dark:border-slate-700">
@@ -48,6 +60,15 @@ export function Footer() {
                   className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   {t('services.consultation')}
+                </Link>
+              </li>
+
+              <li>  
+                <Link
+                  to='/documents'
+                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                  {t('nav.documents')}
                 </Link>
               </li>
             </ul>
