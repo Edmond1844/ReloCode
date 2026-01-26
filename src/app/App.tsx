@@ -12,6 +12,9 @@ import { AboutPage } from '@/app/pages/AboutPage';
 import { ContactsPage } from '@/app/pages/ContactsPage';
 import { DocumentsPage } from '@/app/pages/DocumentsPage';
 
+// Имрорты услуги сервиса
+import {ResidencePermit} from "@/app/ourServicesPages/ResidencePermit/ResidencePermit";
+
 export default function App() {
   return (
     <ThemeProvider>
@@ -30,6 +33,7 @@ export default function App() {
                 <Route path="/contacts" element={<ContactsPage />} />
                 <Route path="/consultation" element={<ContactsPage />} />
                 <Route path="/documents" element={<DocumentsPage />} />
+                <Route path="/services/digital-nomad" element={<ResidencePermit />} />
               </Routes>
             </main>
             <Footer />

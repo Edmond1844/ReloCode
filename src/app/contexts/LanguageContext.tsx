@@ -92,7 +92,14 @@ const translations = {
     'footer.askquestion.telegram': 'Ask a Question on Telegram',
     'footer.askquestion.whatsapp': 'Ask a Question on WhatsApp',
     'footer.copyright': '© 2026 ReloCode. All rights reserved.',
+
+    // Footer links 
+    'footer.links.digitalnomad': 'Digital Nomad Residence Permit',
+    'footer.links.startup': 'Startup Visa',
+    'footer.links.consultation': 'Personal Consultation',
+    'footer.links.documents': 'Documents',
   },
+
   ru: {
     // Header
     'nav.services': 'Услуги',
@@ -146,7 +153,6 @@ const translations = {
     'services.translation': 'Справки и переводы jurado',
     'services.translation.desc': 'Профессиональные переводы юридических документов',
     'services.translation.details': 'Заверенные переводы, услуги апостиля, легализация документов.',
-
     
     // Countries
     'countries.title': 'Страны',
@@ -177,6 +183,16 @@ const translations = {
     'footer.askquestion.telegram': 'Задать вопрос в Telegram',
     'footer.askquestion.whatsapp': 'Задать вопрос в WhatsApp',
     'footer.copyright': '© 2026 ReloCode. Все права защищены.',
+
+    //Footer links в переменную и закинуть в футер? 
+    'footer.links.digitalnomad': 'ВНЖ Digital Nomad', 
+    'footer.links.startup': 'Startup-виза',
+    'footer.links.consultation': 'Персональная консультация',
+    'footer.links.documents': 'Документы',
+
+    'footer.links.videos': 'Видео',
+
+    
   },
 };
 

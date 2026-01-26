@@ -7,15 +7,18 @@ import { Button } from '@/app/components/ui/button';
 export function Footer() {
   const { t } = useLanguage();
 
-    const navFooterLinks = [
-    { to: '/services', label: t('nav.services') },
-    { to: '/countries', label: t('nav.countries') },
-    { to: '/blog', label: t('nav.blog') },
-    { to: '/videos', label: t('nav.videos') },
-    { to: '/about', label: t('nav.about') },
-    { to: '/contacts', label: t('nav.contacts') },
-    { to: '/documents', label: t('nav.documents') },
+  const navFooterLinksServices = [
+  { to: '/services/digital-nomad', label: t('footer.links.digitalnomad') }, // для всех сдеалть 2 страницы смотри в архиологии подробнее 
+  { to: '/services/startup', label: t('footer.links.startup') },
+  { to: '/services/consultation', label: t('footer.links.consultation') },
+  { to: '/documents', label: t('footer.links.documents') },
   ];
+
+  const navFooterLinksVideos = [
+    { to: '/videos', label: t('footer.links.videos') },
+  ];
+
+  const styleForLink = 'text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors';
 
 
   return (
@@ -24,9 +27,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-4">
+            <Link to="/" className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-4">
               ReloCode
-            </h3>
+            </Link>
             <p className="text-sm text-slate-600 dark:text-slate-400">
               {t('about.desc1')}
             </p>
@@ -34,70 +37,44 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">
-              {t('nav.services')}
-            </h4>
+            <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">{t('nav.services')}</h4>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/services"
-                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  {t('services.digitalnomad')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  {t('services.startup')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  {t('services.consultation')}
-                </Link>
-              </li>
-
-              <li>  
-                <Link
-                  to='/documents'
-                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              {navFooterLinksServices.map(linkFooterServices => (
+                <li key={linkFooterServices.to}>
+                  <Link
+                  to={linkFooterServices.to}
+                  className={styleForLink}
                   >
-                  {t('nav.documents')}
-                </Link>
-              </li>
+                    {linkFooterServices.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Social & Resources */}
           <div>
             <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-4">
               {t('nav.videos')}
             </h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-2"
-                >
-                  <Youtube className="w-4 h-4" />
-                  YouTube
-                </a>
-              </li>
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                >
-                  {t('nav.blog')}
-                </Link>
-              </li>
-            </ul>
+              <a
+                href="#"
+                className={`${styleForLink} inline-flex items-center gap-2`}
+              >
+                <Youtube className="w-4 h-4" />
+                YouTube
+              </a>
+              <ul className="space-y-2"> 
+                {navFooterLinksVideos.map(linkFooterVideos => (
+                  <li key={linkFooterVideos.to}>
+                    <Link
+                      to={linkFooterVideos.to}
+                      className={styleForLink}
+                    >
+                      {linkFooterVideos.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
           </div>
 
           {/* Contact Buttons */}
