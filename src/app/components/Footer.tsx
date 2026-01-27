@@ -11,7 +11,7 @@ export function Footer() {
   { to: '/services/digital-nomad', label: t('footer.links.digitalnomad') }, // для всех сдеалть 2 страницы смотри в архиологии подробнее 
   { to: '/services/startup', label: t('footer.links.startup') },
   { to: '/services/consultation', label: t('footer.links.consultation') },
-  { to: '/documents', label: t('footer.links.documents') },
+  { to: '/services/documents', label: t('footer.links.documents') },
   ];
 
   const navFooterLinksVideos = [
@@ -19,7 +19,6 @@ export function Footer() {
   ];
 
   const styleForLink = 'text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors';
-
 
   return (
     <footer className="bg-slate-100 dark:bg-slate-900 border-t dark:border-slate-700">

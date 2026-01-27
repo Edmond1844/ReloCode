@@ -1,12 +1,12 @@
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { ServicePageIntro } from "../ServicePageIntro/ServicePageIntro";
 
-export function ResidencePermit() {
+export function StartupVisa() {
 	const { t } = useLanguage();
 
 	return (
 		<div>
-			<ServicePageIntro title={t("services.digitalnomad")}/>
+			<ServicePageIntro title={t("services.startup")}/>
 		</div>
 	);
 }

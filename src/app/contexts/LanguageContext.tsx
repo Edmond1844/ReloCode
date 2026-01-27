@@ -62,6 +62,7 @@ const translations = {
     'services.translation': 'Certificates and Sworn Translations',
     'services.translation.desc': 'Professional translation services for legal documents',
     'services.translation.details': 'Certified translations, apostille services, document legalization.',
+    'services.documents': 'documents',
     
     // Countries
     'countries.title': 'Countries',
@@ -153,6 +154,7 @@ const translations = {
     'services.translation': 'Справки и переводы jurado',
     'services.translation.desc': 'Профессиональные переводы юридических документов',
     'services.translation.details': 'Заверенные переводы, услуги апостиля, легализация документов.',
+    'services.documents': 'Документы',
     
     // Countries
     'countries.title': 'Страны',

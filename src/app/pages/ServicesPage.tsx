@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/app/components/ui/card';
 import { Button } from '@/app/components/ui/button';
@@ -12,6 +13,7 @@ export function ServicesPage() {
       title: t('services.digitalnomad'),
       description: t('services.digitalnomad.desc'),
       details: t('services.digitalnomad.details'),
+      to: '/services/digital-nomad',
     },
     {
       icon: Briefcase,
@@ -45,7 +47,7 @@ export function ServicesPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> 
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -60,8 +62,10 @@ export function ServicesPage() {
                 <CardContent>
                   <p className="text-slate-700 dark:text-slate-300 mb-6">
                     {service.details}
-                    </p>
-                  <Button className="w-full">{t('cta.consultation')}</Button>
+                  </p>
+                <Link to={service.to}> 
+                  <Button className="w-full" style={{ cursor: 'pointer' }}>{t('cta.consultation')}</Button> 
+                </Link>
                 </CardContent>
               </Card>
             );
