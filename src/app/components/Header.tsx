@@ -17,7 +17,7 @@ export function Header() {
     { to: '/videos', label: t('nav.videos') },
     { to: '/about', label: t('nav.about') },
     { to: '/contacts', label: t('nav.contacts') },
-    { to: '/documents', label: t('nav.documents') },
+    { to: '/services/documents', label: t('nav.documents') },
   ];
 
   return (

@@ -31,6 +31,7 @@ export default function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/countries" element={<CountriesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog::slug" element={<BlogPage />} />
                 <Route path="/videos" element={<VideosPage />} />
                 <Route path="/about" element={<AboutPage />} />

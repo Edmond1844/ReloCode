@@ -20,18 +20,21 @@ export function ServicesPage() {
       title: t('services.startup'),
       description: t('services.startup.desc'),
       details: t('services.startup.details'),
+      to: '/services/startup',
     },
     {
       icon: FileText,
       title: t('services.consultation'),
       description: t('services.consultation.desc'),
       details: t('services.consultation.details'),
+      to: '/services/consultation',
     },
     {
       icon: Globe,
       title: t('services.translation'),
       description: t('services.translation.desc'),
       details: t('services.translation.details'),
+      // to: '/services/translation',
     },
   ];
 
