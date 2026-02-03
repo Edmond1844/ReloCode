@@ -2,41 +2,19 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/app/components/ui/card';
 import { Button } from '@/app/components/ui/button';
-import { Users, Briefcase, FileText, Globe } from 'lucide-react';
+
+import { servicesBase } from '../../data/data';
 
 export function ServicesPage() {
   const { t } = useLanguage();
 
-  const services = [
-    {
-      icon: Users,
-      title: t('services.digitalnomad'),
-      description: t('services.digitalnomad.desc'),
-      details: t('services.digitalnomad.details'),
-      to: '/services/digital-nomad',
-    },
-    {
-      icon: Briefcase,
-      title: t('services.startup'),
-      description: t('services.startup.desc'),
-      details: t('services.startup.details'),
-      to: '/services/startup',
-    },
-    {
-      icon: FileText,
-      title: t('services.consultation'),
-      description: t('services.consultation.desc'),
-      details: t('services.consultation.details'),
-      to: '/services/consultation',
-    },
-    {
-      icon: Globe,
-      title: t('services.translation'),
-      description: t('services.translation.desc'),
-      details: t('services.translation.details'),
-      // to: '/services/translation',
-    },
-  ];
+    const services = servicesBase.map(service => ({
+      icon: service.icon,
+      title: t(service.title),           
+      description: t(service.description), 
+      details: t(service.details),   
+      url: service.url,
+  }));
 
   return (
     <div className="py-16 bg-white dark:bg-slate-950 min-h-screen">
@@ -51,6 +29,7 @@ export function ServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> 
+
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -66,7 +45,7 @@ export function ServicesPage() {
                   <p className="text-slate-700 dark:text-slate-300 mb-6">
                     {service.details}
                   </p>
-                <Link to={service.to}> 
+                <Link to={`/services/${service.url}`}>
                   <Button className="w-full" style={{ cursor: 'pointer' }}>{t('cta.consultation')}</Button> 
                 </Link>
                 </CardContent>

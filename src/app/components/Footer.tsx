@@ -8,10 +8,9 @@ export function Footer() {
   const { t } = useLanguage();
 
   const navFooterLinksServices = [
-  { to: '/services/digital-nomad', label: t('footer.links.digitalnomad') }, // для всех сдеалть 2 страницы смотри в архиологии подробнее 
+  { to: '/services/digital-nomad', label: t('footer.links.digitalnomad') },
   { to: '/services/startup', label: t('footer.links.startup') },
   { to: '/services/consultation', label: t('footer.links.consultation') },
-  { to: '/services/documents', label: t('footer.links.documents') },
   ];
 
   const navFooterLinksVideos = [

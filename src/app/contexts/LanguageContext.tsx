@@ -62,7 +62,6 @@ const translations = {
     'services.translation': 'Certificates and Sworn Translations',
     'services.translation.desc': 'Professional translation services for legal documents',
     'services.translation.details': 'Certified translations, apostille services, document legalization.',
-    'services.documents': 'documents',
     
     // Countries
     'countries.title': 'Countries',
@@ -98,7 +97,6 @@ const translations = {
     'footer.links.digitalnomad': 'Digital Nomad Residence Permit',
     'footer.links.startup': 'Startup Visa',
     'footer.links.consultation': 'Personal Consultation',
-    'footer.links.documents': 'Documents',
   },
 
   ru: {
@@ -154,7 +152,6 @@ const translations = {
     'services.translation': 'Справки и переводы jurado',
     'services.translation.desc': 'Профессиональные переводы юридических документов',
     'services.translation.details': 'Заверенные переводы, услуги апостиля, легализация документов.',
-    'services.documents': 'Документы',
     
     // Countries
     'countries.title': 'Страны',
@@ -190,7 +187,6 @@ const translations = {
     'footer.links.digitalnomad': 'ВНЖ Digital Nomad', 
     'footer.links.startup': 'Startup-виза',
     'footer.links.consultation': 'Персональная консультация',
-    'footer.links.documents': 'Документы',
 
     'footer.links.videos': 'Видео',
 

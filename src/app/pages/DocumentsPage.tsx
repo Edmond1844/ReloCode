@@ -5,5 +5,3 @@ export function  DocumentsPage() {
         <div>DocumentsPage</div>
     )
 }
-
-// export default DocumentsPage;

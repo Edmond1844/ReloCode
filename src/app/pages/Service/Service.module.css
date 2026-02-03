@@ -1,0 +1,15 @@
+.service {
+    text-align: center;
+    
+    padding: 25px;
+}
+
+.service__title {
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.service__description {
+    font-size: 20px;
+}
