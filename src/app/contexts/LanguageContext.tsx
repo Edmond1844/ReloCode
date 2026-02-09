@@ -34,7 +34,7 @@ const translations = {
     // Who is this for
     'whofor.title': 'Who is this for?',
     'whofor.professionals.title': 'For Remote Professionals',
-    'whofor.professionals.subtitle': 'Digital Nomad in Spain',
+    'whofor.professionals.subtitle': 'in Spain',
     'whofor.professionals.desc': 'Employment or service contracts',
     'whofor.professionals.benefit1': '3-year residence permit for the whole family',
     'whofor.professionals.benefit2': 'Fast processing',
@@ -91,7 +91,7 @@ const translations = {
     // Footer
     'footer.askquestion.telegram': 'Ask a Question on Telegram',
     'footer.askquestion.whatsapp': 'Ask a Question on WhatsApp',
-    'footer.copyright': '© 2026 ReloCode. All rights reserved.',
+    'footer.copyright': 'All rights reserved.',
 
     // Footer links 
     'footer.links.digitalnomad': 'Digital Nomad Residence Permit',
@@ -124,11 +124,12 @@ const translations = {
     // Who is this for
     'whofor.title': 'Кому подходит?',
     'whofor.professionals.title': 'Удалённым специалистам',
-    'whofor.professionals.subtitle': 'Digital Nomad в Испании',
+    'whofor.professionals.subtitle': 'в Испании',
     'whofor.professionals.desc': 'Трудовой договор или договор оказания услуг',
     'whofor.professionals.benefit1': 'ВНЖ на 3 года для всей семьи',
     'whofor.professionals.benefit2': 'Быстрое рассмотрение',
     'whofor.professionals.benefit3': 'Высокий процент одобрения',
+    
     'whofor.entrepreneurs.title': 'Предпринимателям',
     'whofor.entrepreneurs.subtitle': 'Startup-виза в Испании',
     'whofor.entrepreneurs.desc': 'Для владельцев бизнеса или основателей стартапов',
@@ -181,7 +182,7 @@ const translations = {
     // Footer
     'footer.askquestion.telegram': 'Задать вопрос в Telegram',
     'footer.askquestion.whatsapp': 'Задать вопрос в WhatsApp',
-    'footer.copyright': '© 2026 ReloCode. Все права защищены.',
+    'footer.copyright': 'Все права защищены.',
 
     //Footer links в переменную и закинуть в футер? 
     'footer.links.digitalnomad': 'ВНЖ Digital Nomad', 

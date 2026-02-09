@@ -1,75 +1,74 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { Button } from '@/app/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/app/components/ui/card';
 import { Check, Users, Briefcase, FileText, Globe, TrendingUp, Award, MapPin } from 'lucide-react';
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 
+
+import { targetAudience,countries } from '../../data/data';
+
+
 export function HomePage() {
-  const { t } = useLanguage();
+    const { t } = useLanguage();
+    const benefitsByAudience   = targetAudience.map(targetItem => ({
+      title: t(targetItem.title),           
+      subTitle: t(targetItem.subTitle), 
+      image: targetItem.image,
+      benefits: targetItem.benefits.map(benefit => t(benefit)),
+      url: targetItem.url,
+    }));
 
-  const professionalsBenefits = [
-    t('whofor.professionals.benefit1'),
-    t('whofor.professionals.benefit2'),
-    t('whofor.professionals.benefit3'),
-  ];
+  // const services = [
+  //   {
+  //     icon: Users,
+  //     title: t('services.digitalnomad'),
+  //     description: t('services.digitalnomad.desc'),
+  //   },
+  //   {
+  //     icon: Briefcase,
+  //     title: t('services.startup'),
+  //     description: t('services.startup.desc'),
+  //   },
+  //   {
+  //     icon: FileText,
+  //     title: t('services.consultation'),
+  //     description: t('services.consultation.desc'),
+  //   },
+  //   {
+  //     icon: Globe,
+  //     title: t('services.translation'),
+  //     description: t('services.translation.desc'),
+  //   },
+  // ];
 
-  const entrepreneursBenefits = [
-    t('whofor.entrepreneurs.benefit1'),
-    t('whofor.entrepreneurs.benefit2'),
-    t('whofor.entrepreneurs.benefit3'),
-    t('whofor.entrepreneurs.benefit4'),
-  ];
-
-  const services = [
-    {
-      icon: Users,
-      title: t('services.digitalnomad'),
-      description: t('services.digitalnomad.desc'),
-    },
-    {
-      icon: Briefcase,
-      title: t('services.startup'),
-      description: t('services.startup.desc'),
-    },
-    {
-      icon: FileText,
-      title: t('services.consultation'),
-      description: t('services.consultation.desc'),
-    },
-    {
-      icon: Globe,
-      title: t('services.translation'),
-      description: t('services.translation.desc'),
-    },
-  ];
-
-  const countries = [
-    {
-      name: t('countries.spain'),
-      flag: '🇪🇸',
-      description: t('countries.spain.desc'),
-    },
-    {
-      name: t('countries.portugal'),
-      flag: '🇵🇹',
-      description: t('countries.portugal.desc'),
-    },
-    {
-      name: t('countries.france'),
-      flag: '🇫🇷',
-      description: t('countries.france.desc'),
-    },
-    {
-      name: t('countries.germany'),
-      flag: '🇩🇪',
-      description: t('countries.germany.desc'),
-    },
-    {
-      name: t('countries.usa'),
-      flag: '🇺🇸',
-      description: t('countries.usa.desc'),
-    },
-  ];
+  // const countries = [
+  //   {
+  //     name: t('countries.spain'),
+  //     flag: '🇪🇸',
+  //     description: t('countries.spain.desc'),
+  //   },
+  //   {
+  //     name: t('countries.portugal'),
+  //     flag: '🇵🇹',
+  //     description: t('countries.portugal.desc'),
+  //   },
+  //   {
+  //     name: t('countries.france'),
+  //     flag: '🇫🇷',
+  //     description: t('countries.france.desc'),
+  //   },
+  //   {
+  //     name: t('countries.germany'),
+  //     flag: '🇩🇪',
+  //     description: t('countries.germany.desc'),
+  //   },
+  //   {
+  //     name: t('countries.usa'),
+  //     flag: '🇺🇸',
+  //     description: t('countries.usa.desc'),
+  //   },
+  // ];
 
   return (
     <div className="flex flex-col">
@@ -134,69 +133,38 @@ export function HomePage() {
             {t('whofor.title')}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Remote Professionals Card */}
-            <Card>
-              <CardHeader>
-                <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1623251606108-512c7c4a3507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbm9tYWQlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzY4MzgzNjg0fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Digital nomad workspace"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardTitle>{t('whofor.professionals.title')}</CardTitle>
-                <CardDescription className="text-base">
-                  <strong>{t('whofor.professionals.subtitle')}</strong>
-                  <br />
-                  {t('whofor.professionals.desc')}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {professionalsBenefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700 dark:text-slate-300">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full">{t('cta.learnmore')}</Button>
-              </CardFooter>
-            </Card>
-
-            {/* Entrepreneurs Card */}
-            <Card>
-              <CardHeader>
-                <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1587875643728-b630ed947dc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGFydHVwJTIwZW50cmVwcmVuZXVyfGVufDF8fHx8MTc2ODM4MzE2OXww&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Startup entrepreneur"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardTitle>{t('whofor.entrepreneurs.title')}</CardTitle>
-                <CardDescription className="text-base">
-                  <strong>{t('whofor.entrepreneurs.subtitle')}</strong>
-                  <br />
-                  {t('whofor.entrepreneurs.desc')}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {entrepreneursBenefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700 dark:text-slate-300">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full">{t('cta.learnmore')}</Button>
-              </CardFooter>
-            </Card>
+            {benefitsByAudience.map((item, index) => (
+              <Card key={index}>
+                <CardHeader> 
+                  <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
+                    <ImageWithFallback
+                      src={item.image}
+                      alt="Startup entrepreneur"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <CardTitle>{t('whofor.professionals.title')}</CardTitle>
+                  <CardDescription className="text-base">
+                    <strong>Digital Nomad {t('whofor.professionals.subtitle')}</strong>
+                    <br />
+                    {t('whofor.professionals.desc')}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    {item.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <Check className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                        <span className="text-slate-700 dark:text-slate-300">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Button className="w-full">{t('cta.learnmore')}</Button>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -208,7 +176,7 @@ export function HomePage() {
             {t('services.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => {
+            {/* {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
@@ -228,7 +196,7 @@ export function HomePage() {
                   </CardFooter>
                 </Card>
               );
-            })}
+            })} */}
           </div>
         </div>
       </section>
@@ -240,7 +208,7 @@ export function HomePage() {
             {t('countries.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {countries.map((country, index) => (
+            {/* {countries.map((country, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="text-4xl mb-2">{country.flag}</div>
@@ -254,7 +222,7 @@ export function HomePage() {
                   </Button>
                 </CardFooter>
               </Card>
-            ))}
+            ))} */}
           </div>
         </div>
       </section>

@@ -7,7 +7,6 @@ import { servicesBase } from '../../data/data';
 
 export function ServicesPage() {
   const { t } = useLanguage();
-
     const services = servicesBase.map(service => ({
       icon: service.icon,
       title: t(service.title),           
@@ -15,7 +14,6 @@ export function ServicesPage() {
       details: t(service.details),   
       url: service.url,
   }));
-
   return (
     <div className="py-16 bg-white dark:bg-slate-950 min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,9 +25,7 @@ export function ServicesPage() {
             {t('about.desc2')}
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> 
-
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

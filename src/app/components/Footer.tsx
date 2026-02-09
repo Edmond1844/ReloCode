@@ -19,6 +19,8 @@ export function Footer() {
 
   const styleForLink = 'text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors';
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-slate-100 dark:bg-slate-900 border-t dark:border-slate-700">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -99,7 +101,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t dark:border-slate-700">
           <p className="text-center text-sm text-slate-600 dark:text-slate-400">
-            {t('footer.copyright')}
+            © 2020 - {currentYear} ReloCode{t('footer.copyright')}
           </p>
         </div>
       </div>
