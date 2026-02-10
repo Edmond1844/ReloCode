@@ -1,44 +1,23 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/app/components/ui/card';
 import { Button } from '@/app/components/ui/button';
 import { MapPin } from 'lucide-react';
 
+import { countries } from '../../data/data';
+
+
 export function CountriesPage() {
   const { t } = useLanguage();
 
-  const countries = [
-    {
-      name: t('countries.spain'),
-      flag: '🇪🇸',
-      description: t('countries.spain.desc'),
-      programs: ['Digital Nomad Visa', 'Startup Visa', 'Non-Lucrative Residence'],
-    },
-    {
-      name: t('countries.portugal'),
-      flag: '🇵🇹',
-      description: t('countries.portugal.desc'),
-      programs: ['D7 Visa', 'Golden Visa', 'Digital Nomad Visa'],
-    },
-    {
-      name: t('countries.france'),
-      flag: '🇫🇷',
-      description: t('countries.france.desc'),
-      programs: ['Talent Passport', 'Auto-entrepreneur Visa', 'Tech Visa'],
-    },
-    {
-      name: t('countries.germany'),
-      flag: '🇩🇪',
-      description: t('countries.germany.desc'),
-      programs: ['Freelance Visa', 'Job Seeker Visa', 'Blue Card'],
-    },
-    {
-      name: t('countries.usa'),
-      flag: '🇺🇸',
-      description: t('countries.usa.desc'),
-      programs: ['O-1 Visa', 'EB-2 NIW', 'E-2 Visa'],
-    },
-  ];
-
+  const processedCountries = countries.map(country => ({
+    name: t(country.name),
+      flag: t(country.description),
+      description: t(country.description),
+      url: country.url,
+      programs: country.programs.map(program => t(program)),
+  }));
+  
   return (
     <div className="py-16 bg-slate-50 dark:bg-slate-900 min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +31,7 @@ export function CountriesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {countries.map((country, index) => (
+          {processedCountries.map((country, index) => (
             <Card key={index} className="hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="text-6xl mb-4 text-center">{country.flag}</div>
@@ -75,10 +54,12 @@ export function CountriesPage() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  {t('cta.learnmore')}
-                </Button>
+                <Link to={`/countries/${country.url}`}>
+                  <Button variant="outline" className="w-full">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    {t('cta.learnmore')}
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}

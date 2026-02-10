@@ -7,6 +7,7 @@ import { HomePage } from '@/app/pages/HomePage';
 import { ServicesPage } from '@/app/pages/ServicesPage';
 import { Service } from '@/app/pages/Service/Service';
 import { CountriesPage } from '@/app/pages/CountriesPage';
+import { Countrie } from '@/app/pages/Countrie/Countrie';
 import { BlogPage } from '@/app/pages/BlogPage';
 import { VideosPage } from '@/app/pages/VideosPage';
 import { AboutPage } from '@/app/pages/AboutPage';
@@ -19,16 +20,17 @@ export default function App() {
     <ThemeProvider>
       <LanguageProvider>
         <Router>
-          <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+          <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col">
             <Header />
-            <main>
+            <main className='flex-1'>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/services/:slug" element={<Service />} />
                 <Route path="/countries" element={<CountriesPage />} />
+                <Route path="/countries/:slug" element={<Countrie />} />
                 <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog::slug" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<BlogPage />} />
                 <Route path="/videos" element={<VideosPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contacts" element={<ContactsPage />} />
@@ -36,7 +38,7 @@ export default function App() {
                 <Route path="/documents" element={<DocumentsPage />} />
               </Routes>
             </main>
-            <Footer />
+            <Footer className='flex-shrink-0'/>
           </div>
         </Router>
       </LanguageProvider>

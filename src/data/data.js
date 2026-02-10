@@ -7,7 +7,7 @@ export const servicesBase = [
         title: 'services.digitalnomad',       
         description: 'services.digitalnomad.desc',
         details: 'services.digitalnomad.details',
-        url: 'digital-nomad',
+        url: 'digitalnomad',
     },
     {
         icon: Briefcase,
@@ -20,7 +20,7 @@ export const servicesBase = [
         icon: FileText,
         title: 'services.consultation',
         description: 'services.consultation.desc',
-        details: 'services.consultation.details',
+        details: 'services.consultation.details',        
         url: 'consultation',
     },
     {
@@ -42,9 +42,9 @@ export const targetAudience  = [
         subTitle: 'whofor.professionals.subtitle',
         description: 'whofor.professionals.desc',
         benefits: [
-            'whofor.entrepreneurs.benefit1',
-            'whofor.entrepreneurs.benefit2',
-            'whofor.entrepreneurs.benefit3',
+            'whofor.professionals.benefit1',
+            'whofor.professionals.benefit2',
+            'whofor.professionals.benefit3',
         ]
     },
     // Предприниматели
@@ -61,33 +61,42 @@ export const targetAudience  = [
             'whofor.entrepreneurs.benefit4',
         ],
     }
-]
-
+];
 
 export const countries = [
-    // {
-    //     name: t('countries.spain'),
-    //     flag: '🇪🇸',
-    //     description: t('countries.spain.desc'),
-    // },
-    // {
-    //     name: t('countries.portugal'),
-    //     flag: '🇵🇹',
-    //     description: t('countries.portugal.desc'),
-    // },
-    // {
-    //     name: t('countries.france'),
-    //     flag: '🇫🇷',
-    //     description: t('countries.france.desc'),
-    // },
-    // {
-    //     name: t('countries.germany'),
-    //     flag: '🇩🇪',
-    //     description: t('countries.germany.desc'),
-    // },
-    // {
-    //     name: t('countries.usa'),
-    //     flag: '🇺🇸',
-    //     description: t('countries.usa.desc'),
-    // },
+    {
+        url: 'spain',
+        name: 'countries.spain',
+        flag: '🇪🇸',
+        description:'countries.spain.desc',
+        programs: ['Digital Nomad Visa', 'Startup Visa', 'Non-Lucrative Residence'],
+    },
+    {
+        url: 'portugal',
+        name: 'countries.portugal',
+        flag: '🇵🇹',
+        description: 'countries.portugal.desc',
+        programs: ['D7 Visa', 'Golden Visa', 'Digital Nomad Visa'],
+    },
+    {
+        url: 'france',
+        name: 'countries.france',
+        flag: '🇫🇷',
+        description: 'countries.france.desc',
+        programs: ['Talent Passport', 'Auto-entrepreneur Visa', 'Tech Visa'],
+    },
+    {
+        url: 'germany',
+        name: 'countries.germany',
+        flag: '🇩🇪',
+        description: 'countries.germany.desc',
+        programs: ['Freelance Visa', 'Job Seeker Visa', 'Blue Card'],
+    },
+    {
+        url: 'usa',
+        name: 'countries.usa',
+        flag: '🇺🇸',
+        description: 'countries.usa.desc',
+        programs: ['O-1 Visa', 'EB-2 NIW', 'E-2 Visa'],
+    },
 ];

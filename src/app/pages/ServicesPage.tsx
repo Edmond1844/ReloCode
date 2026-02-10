@@ -42,7 +42,7 @@ export function ServicesPage() {
                     {service.details}
                   </p>
                 <Link to={`/services/${service.url}`}>
-                  <Button className="w-full" style={{ cursor: 'pointer' }}>{t('cta.consultation')}</Button> 
+                  <Button className="w-full">{t('cta.consultation')}</Button> 
                 </Link>
                 </CardContent>
               </Card>

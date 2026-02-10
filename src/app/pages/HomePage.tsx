@@ -6,7 +6,7 @@ import { Check, Users, Briefcase, FileText, Globe, TrendingUp, Award, MapPin } f
 import { ImageWithFallback } from '@/app/components/figma/ImageWithFallback';
 
 
-import { targetAudience,countries } from '../../data/data';
+import { targetAudience, servicesBase, countries } from '../../data/data';
 
 
 export function HomePage() {
@@ -19,56 +19,22 @@ export function HomePage() {
       url: targetItem.url,
     }));
 
-  // const services = [
-  //   {
-  //     icon: Users,
-  //     title: t('services.digitalnomad'),
-  //     description: t('services.digitalnomad.desc'),
-  //   },
-  //   {
-  //     icon: Briefcase,
-  //     title: t('services.startup'),
-  //     description: t('services.startup.desc'),
-  //   },
-  //   {
-  //     icon: FileText,
-  //     title: t('services.consultation'),
-  //     description: t('services.consultation.desc'),
-  //   },
-  //   {
-  //     icon: Globe,
-  //     title: t('services.translation'),
-  //     description: t('services.translation.desc'),
-  //   },
-  // ];
+    const services = servicesBase.map(service => ({
+      icon: service.icon,
+      title: t(service.title),           
+      description: t(service.description), 
+      details: t(service.details),   
+      url: service.url,
+    }));  
+  
+    const processedCountries = countries.map(country => ({
+      name: t(country.name),
+      flag: t(country.description),
+      description: t(country.description),
+      url: country.url,
+    }));
 
-  // const countries = [
-  //   {
-  //     name: t('countries.spain'),
-  //     flag: '🇪🇸',
-  //     description: t('countries.spain.desc'),
-  //   },
-  //   {
-  //     name: t('countries.portugal'),
-  //     flag: '🇵🇹',
-  //     description: t('countries.portugal.desc'),
-  //   },
-  //   {
-  //     name: t('countries.france'),
-  //     flag: '🇫🇷',
-  //     description: t('countries.france.desc'),
-  //   },
-  //   {
-  //     name: t('countries.germany'),
-  //     flag: '🇩🇪',
-  //     description: t('countries.germany.desc'),
-  //   },
-  //   {
-  //     name: t('countries.usa'),
-  //     flag: '🇺🇸',
-  //     description: t('countries.usa.desc'),
-  //   },
-  // ];
+
 
   return (
     <div className="flex flex-col">
@@ -161,7 +127,9 @@ export function HomePage() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">{t('cta.learnmore')}</Button>
+                  <Link className="w-full"to={`/services/${item.url}/`} >
+                    <Button >{t('cta.learnmore')}</Button>
+                  </Link>
                 </CardFooter>
               </Card>
             ))}
@@ -176,7 +144,7 @@ export function HomePage() {
             {t('services.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* {services.map((service, index) => {
+            {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
@@ -190,13 +158,15 @@ export function HomePage() {
                     <p className="text-sm text-slate-600 dark:text-slate-400">{service.description}</p>
                   </CardContent>
                   <CardFooter>
-                    <Button variant="outline" className="w-full">
-                      {t('cta.consultation')}
-                    </Button>
+                    <Link className="w-full" to={`/services/${service.url}/`}>
+                      <Button variant="outline" className="w-full">
+                        {t('cta.consultation')}
+                      </Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               );
-            })} */}
+            })}
           </div>
         </div>
       </section>
@@ -208,21 +178,26 @@ export function HomePage() {
             {t('countries.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* {countries.map((country, index) => (
+            {processedCountries.map((country, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="text-4xl mb-2">{country.flag}</div>
+                </CardHeader>
+                <CardContent>
                   <CardTitle>{country.name}</CardTitle>
                   <CardDescription>{country.description}</CardDescription>
-                </CardHeader>
+                </CardContent>
                 <CardFooter>
-                  <Button variant="outline" className="w-full">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    {t('cta.programs')}
-                  </Button>
+                  <Link to={`/countries/${country.url}/`}>
+                    <Button variant="outline" className="w-full">
+                      <MapPin className="w-4 h-4 mr-2" />
+                        {t('cta.programs')}
+                    </Button>
+                  </Link>
+
                 </CardFooter>
               </Card>
-            ))} */}
+            ))}
           </div>
         </div>
       </section>
