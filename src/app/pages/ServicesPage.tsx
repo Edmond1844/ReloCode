@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/app
 import { Button } from '@/app/components/ui/button';
 
 import { servicesBase } from '../../data/data';
+import { Title } from '@/app/pages/Titles/Title';
+
 
 export function ServicesPage() {
   const { t } = useLanguage();
@@ -14,17 +16,11 @@ export function ServicesPage() {
       details: t(service.details),   
       url: service.url,
   }));
+  
   return (
     <div className="py-16 bg-white dark:bg-slate-950 min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-4">
-            {t('services.title')}
-          </h1>
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            {t('about.desc2')}
-          </p>
-        </div>
+        <Title title="services.title" text="about.desc2"/>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> 
           {services.map((service, index) => {
             const Icon = service.icon;

@@ -19,4 +19,3 @@ export function Service() {
 			</div>
 		);
 }
-

@@ -13,6 +13,8 @@ import { VideosPage } from '@/app/pages/VideosPage';
 import { AboutPage } from '@/app/pages/AboutPage';
 import { ContactsPage } from '@/app/pages/ContactsPage';
 import { DocumentsPage } from '@/app/pages/DocumentsPage';
+import { ForWhom } from "@/app/pages/forWhom/ForWhom";
+import { ForWhomCard } from "@/app/pages/forWhom/ForWhomCard";
 
 
 export default function App() {
@@ -36,6 +38,8 @@ export default function App() {
                 <Route path="/contacts" element={<ContactsPage />} />
                 <Route path="/consultation" element={<ContactsPage />} />
                 <Route path="/documents" element={<DocumentsPage />} />
+                <Route path='/forwhom' element={<ForWhom/>}/>
+                <Route path='/forwhom/:slug' element={<ForWhomCard/>}/>
               </Routes>
             </main>
             <Footer className='flex-shrink-0'/>

@@ -82,7 +82,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 export {
-  Card,
+  Card, 
   CardHeader,
   CardFooter,
   CardTitle,

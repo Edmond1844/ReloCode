@@ -19,6 +19,7 @@ const translations = {
     'nav.contacts': 'Contacts',
     'cta.consultation': 'Free Consultation',
     'nav.documents': 'Documents',
+    'nav.forwhom': 'Audience',
     
     // Hero
     'hero.title': 'We help you obtain residence permits in Europe and America',
@@ -27,6 +28,8 @@ const translations = {
     
     // About
     'about.title': 'About Our Service',
+    'about.subtitle': 'Relosafe — your reliable partner in obtaining a residence permit and moving to Europe and America.',
+
     'about.desc1': 'Selection of the best residence permit option',
     'about.desc2': 'Full support before and after relocation',
     'about.desc3': 'Legal and everyday relocation assistance',
@@ -62,9 +65,13 @@ const translations = {
     'services.translation': 'Certificates and Sworn Translations',
     'services.translation.desc': 'Professional translation services for legal documents',
     'services.translation.details': 'Certified translations, apostille services, document legalization.',
+
+     // ForWhom
+    'forwhom.title': 'For Whom?',
     
     // Countries
     'countries.title': 'Countries',
+    'countries.subtitle': 'Explore residence permit programs across different countries',
     'countries.spain': 'Spain',
     'countries.spain.desc': 'Digital Nomad visa, Startup visa',
     'countries.portugal': 'Portugal',
@@ -76,11 +83,19 @@ const translations = {
     'countries.usa': 'USA',
     'countries.usa.desc': 'O-1 visa, EB-2 NIW',
     'cta.programs': 'View Programs',
+
+    // Blog 
+    'blog.subtitle': 'Expert insights and guides on relocation and residence permits',
     
     // Videos
     'videos.title': 'Useful Materials',
     'videos.subtitle': 'Videos about residence permits and life in Spain',
     'cta.watchall': 'Watch All Videos',
+
+    // About
+
+    // Contacts
+    'contacts.subtitle': 'Get in touch with us for a free consultation',
     
     // Trust
     'trust.title': 'Why Trust Us',
@@ -98,7 +113,6 @@ const translations = {
     'footer.links.startup': 'Startup Visa',
     'footer.links.consultation': 'Personal Consultation',
   },
-
   ru: {
     // Header
     'nav.services': 'Услуги',
@@ -109,6 +123,7 @@ const translations = {
     'nav.contacts': 'Контакты',
     'cta.consultation': 'Бесплатная консультация',
     'nav.documents': 'Документы',
+    'nav.forwhom': 'Аудитория',
     
     // Hero
     'hero.title': 'Помогаем получить вид на жительство в Европе и Америке',
@@ -116,7 +131,9 @@ const translations = {
     'cta.question': 'Задать вопрос',
     
     // About
-    'about.title': 'О нашем сервисе',
+    'about.title': 'О нашем сервисе', 
+    'about.subtitle': 'Relosafe — ваш надежный партнер в получении вида на жительство и переезде в Европу и Америку.',
+
     'about.desc1': 'Подбор оптимального варианта ВНЖ',
     'about.desc2': 'Полное сопровождение до и после релокации',
     'about.desc3': 'Юридическая и бытовая помощь в переезде',
@@ -153,9 +170,13 @@ const translations = {
     'services.translation': 'Справки и переводы jurado',
     'services.translation.desc': 'Профессиональные переводы юридических документов',
     'services.translation.details': 'Заверенные переводы, услуги апостиля, легализация документов.',
+
+    // ForWhom
+    'forwhom.title': 'Кому подходит?',
     
     // Countries
     'countries.title': 'Страны',
+    'countries.subtitle': 'Изучите программы ординатуры в разных странах.',
     'countries.spain': 'Испания',
     'countries.spain.desc': 'Digital Nomad виза, Startup виза',
     'countries.portugal': 'Португалия',
@@ -167,11 +188,19 @@ const translations = {
     'countries.usa': 'США',
     'countries.usa.desc': 'O-1 виза, EB-2 NIW',
     'cta.programs': 'Смотреть программы',
+
+    // Blog 
+    'blog.subtitle': 'Консультации и помощь экспертов по вопросам переезда и получения вида на жительство.',
     
     // Videos
     'videos.title': 'Полезные материалы',
     'videos.subtitle': 'Видео о ВНЖ и жизни в Испании',
     'cta.watchall': 'Смотреть все видео',
+
+    // About
+
+    // Contacts
+    'contacts.subtitle': 'Свяжитесь с нами для бесплатной консультации.',
     
     // Trust
     'trust.title': 'Почему нам доверяют',

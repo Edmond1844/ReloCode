@@ -60,6 +60,7 @@ export const targetAudience  = [
             'whofor.entrepreneurs.benefit3',
             'whofor.entrepreneurs.benefit4',
         ],
+        
     }
 ];
 

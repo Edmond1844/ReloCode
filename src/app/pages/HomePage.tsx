@@ -11,7 +11,7 @@ import { targetAudience, servicesBase, countries } from '../../data/data';
 
 export function HomePage() {
     const { t } = useLanguage();
-    const benefitsByAudience   = targetAudience.map(targetItem => ({
+    const benefitsByAudience = targetAudience.map(targetItem => ({
       title: t(targetItem.title),           
       subTitle: t(targetItem.subTitle), 
       image: targetItem.image,
@@ -127,8 +127,8 @@ export function HomePage() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Link className="w-full"to={`/services/${item.url}/`} >
-                    <Button >{t('cta.learnmore')}</Button>
+                  <Link className="w-full" to={`/forwhom/${item.url}/`} >
+                    <Button className="w-full">{t('cta.learnmore')}</Button>
                   </Link>
                 </CardFooter>
               </Card>

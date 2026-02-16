@@ -1,7 +1,9 @@
-import { useLanguage } from '@/app/contexts/LanguageContext';
+import { Title } from '@/app/pages/Titles/Title';
 
 export function  DocumentsPage() {
     return (
-        <div>DocumentsPage</div>
+        <>
+            <Title title="nav.documents"/>
+        </>
     )
 }

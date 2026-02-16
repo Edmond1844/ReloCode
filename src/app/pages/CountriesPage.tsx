@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/app/components/ui/button';
 import { MapPin } from 'lucide-react';
 
+import { Title } from '@/app/pages/Titles/Title';
+
 import { countries } from '../../data/data';
 
 
@@ -22,14 +24,8 @@ export function CountriesPage() {
     <div className="py-16 bg-slate-50 dark:bg-slate-900 min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-4">
-            {t('countries.title')}
-          </h1>
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Explore residence permit programs across different countries
-          </p>
+          <Title title="countries.title" text="countries.subtitle"/>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {processedCountries.map((country, index) => (
             <Card key={index} className="hover:shadow-xl transition-shadow">
