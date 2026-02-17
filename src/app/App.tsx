@@ -9,6 +9,7 @@ import { Service } from '@/app/pages/Service/Service';
 import { CountriesPage } from '@/app/pages/CountriesPage';
 import { Countrie } from '@/app/pages/Countrie/Countrie';
 import { BlogPage } from '@/app/pages/BlogPage';
+import { CardBlog } from '@/app/pages/CardBlog/CardBlog';
 import { VideosPage } from '@/app/pages/VideosPage';
 import { AboutPage } from '@/app/pages/AboutPage';
 import { ContactsPage } from '@/app/pages/ContactsPage';
@@ -32,7 +33,7 @@ export default function App() {
                 <Route path="/countries" element={<CountriesPage />} />
                 <Route path="/countries/:slug" element={<Countrie />} />
                 <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/:slug" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<CardBlog />} />
                 <Route path="/videos" element={<VideosPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contacts" element={<ContactsPage />} />

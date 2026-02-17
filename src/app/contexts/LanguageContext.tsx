@@ -86,13 +86,67 @@ const translations = {
 
     // Blog 
     'blog.subtitle': 'Expert insights and guides on relocation and residence permits',
+
+    'blog.card.title.spain': 'Complete Guide to Digital Nomad Visa in Spain',
+    'blog.card.excerpt.spain': 'Everything you need to know about the Spain Digital Nomad visa - requirements, process, and timeline.',
+    'blog.card.category.spain': 'Spain',
+
+    'blog.card.title.visa-guides': 'Startup Visa vs Digital Nomad: Which is Right for You?',
+    'blog.card.excerpt.visa-guides': 'Compare the key differences between startup and digital nomad visas to make the right choice.',
+    'blog.card.category.visa-guides': 'Guides',
+
+    'blog.card.title.Portugal': 'Tax Benefits of Portuguese D7 Visa',
+    'blog.card.excerpt.Portugal': 'Learn about the NHR tax regime and other financial benefits available to D7 visa holders.',
+    'blog.card.category.Portugal': 'Portugal',
+
+    'blog.card.title.Germany': 'Moving to Germany as a Freelancer: Complete Checklist',
+    'blog.card.excerpt.Germany': 'Step-by-step guide to relocating to Germany on a freelance visa, including required documents.',
+    'blog.card.category.Germany': 'Germany',
+
+    'blog.card.title.famaly-guides': 'Family Relocation: Bringing Your Spouse and Children',
+    'blog.card.excerpt.famaly-guides': 'How to include family members in your residence permit application and what documents you need.',
+    'blog.card.category.famaly-guides': 'Guides',
+
+    'blog.card.title.life-in-Spain': 'Life in Spain: First Month Essentials',
+    'blog.card.excerpt.life-in-Spain': 'What to expect and how to settle in during your first month living in Spain.',
+    'blog.card.category.life-in-Spain': 'Spain',
+
+
+    'blog.card.button': 'Read more',
+
+
+
     
     // Videos
     'videos.title': 'Useful Materials',
     'videos.subtitle': 'Videos about residence permits and life in Spain',
     'cta.watchall': 'Watch All Videos',
 
+    // Values
+    'values.mission.title': 'Our Mission',
+    'values.mission.description': 'To make relocation simple, transparent, and accessible for everyone seeking new opportunities in Europe and America.',
+
+    'values.team.title': 'Our Team',
+    'values.team.description': 'Experienced immigration lawyers, consultants, and relocation specialists with deep knowledge of European and American programs.',
+
+    'values.approach.title': 'Our Approach',
+    'values.approach.description': 'Personalized service, detailed case analysis, and full support from initial consultation to successful relocation.',
+
+    'values.expertise.title': 'Our Expertise',
+    'values.expertise.description': '5+ years of experience, 500+ successful cases, partnerships with government agencies and accelerators.',
+
     // About
+    'about.whyChoose.title': 'Why Choose Us?',
+    'about.whyChoose.items.transparency.title': 'Transparency',
+    'about.whyChoose.items.transparency.description': 'Clear pricing, honest timelines, and no hidden fees',
+
+    'about.whyChoose.items.expertise.title': 'Expertise',
+    'about.whyChoose.items.expertise.description': 'Deep knowledge of immigration law and practical relocation experience',
+
+    'about.whyChoose.items.support.title': 'Support',
+    'about.whyChoose.items.support.description': 'Full support before, during, and after the relocation process',
+
+
 
     // Contacts
     'contacts.subtitle': 'Get in touch with us for a free consultation',
@@ -189,15 +243,64 @@ const translations = {
     'countries.usa.desc': 'O-1 виза, EB-2 NIW',
     'cta.programs': 'Смотреть программы',
 
-    // Blog 
-    'blog.subtitle': 'Консультации и помощь экспертов по вопросам переезда и получения вида на жительство.',
+   // Blog 
+    'blog.subtitle': 'Экспертные рекомендации и руководства по вопросам переезда и получения вида на жительство.',
+
+    'blog.card.title.spain': 'Полное руководство по получению визы для цифровых кочевников в Испании.',
+    'blog.card.excerpt.spain': 'Вся необходимая информация о визе для цифровых кочевников в Испанию: требования, процедура и сроки.',
+    'blog.card.category.spain': 'Испания',
+
+    'blog.card.title.visa-guides': 'Виза для стартапов или статус цифрового кочевника: что подходит именно вам?',
+    'blog.card.excerpt.visa-guides': 'Сравните ключевые различия между визами для стартапов и визами для цифровых кочевников, чтобы сделать правильный выбор.',
+    'blog.card.category.visa-guides': 'Путеводители',
+
+    'blog.card.title.Portugal': 'Налоговые преимущества португальской визы D7',
+    'blog.card.excerpt.Portugal': 'Узнайте о налоговом режиме NHR и других финансовых преимуществах, доступных обладателям визы D7.',
+    'blog.card.category.Portugal': 'Португалия',
+
+    'blog.card.title.Germany': 'Переезд в Германию в качестве фрилансера: полный контрольный список.',
+    'blog.card.excerpt.Germany': 'Пошаговое руководство по переезду в Германию по визе для фрилансеров, включая необходимые документы.',
+    'blog.card.category.Germany': 'Германия',
+
+    'blog.card.title.famaly-guides': 'Переезд семьи: проживание супруга(и) и детей.',
+    'blog.card.excerpt.famaly-guides': 'Как включить членов семьи в заявление на получение вида на жительство и какие документы вам понадобятся.',
+    'blog.card.category.famaly-guides': 'Путеводители',
+
+    'blog.card.title.life-in-Spain': 'Жизнь в Испании: все необходимое для первого месяца',
+    'blog.card.excerpt.life-in-Spain': 'Чего ожидать и как освоиться в течение первого месяца жизни в Испании.',
+    'blog.card.category.life-in-Spain': 'Испания',
+    
+    'blog.card.button': 'Читать далее',
     
     // Videos
     'videos.title': 'Полезные материалы',
     'videos.subtitle': 'Видео о ВНЖ и жизни в Испании',
     'cta.watchall': 'Смотреть все видео',
 
+    
+    // Values
+    'values.mission.title': 'Наша миссия',
+    'values.mission.description': 'Сделать переезд простым, прозрачным и доступным для всех, кто ищет новые возможности в Европе и Америке.',
+
+    'values.team.title': 'Наша команда',
+    'values.team.description': 'Опытные юристы, консультанты и специалисты по вопросам иммиграции, обладающие глубокими знаниями европейских и американских программ.',
+
+    'values.approach.title': 'Наш подход',
+    'values.approach.description': 'Индивидуальный подход к каждому клиенту, детальный анализ ситуации и всесторонняя поддержка от первоначальной консультации до успешного переезда.',
+
+    'values.expertise.title': 'Наш опыт',
+    'values.expertise.description': 'Более 5 лет опыта, более 500 успешных проектов, партнерские отношения с государственными учреждениями и акселераторами.',
+    
     // About
+    'about.whyChoose.title': 'Почему выбирают нас?',
+    'about.whyChoose.items.transparency.title': 'Прозрачность',
+    'about.whyChoose.items.transparency.description': 'Прозрачное ценообразование, честные сроки и никаких скрытых платежей.',
+
+    'about.whyChoose.items.expertise.title': 'Экспертиза',
+    'about.whyChoose.items.expertise.description': 'Глубокие знания иммиграционного права и практический опыт в сфере переезда.',
+
+    'about.whyChoose.items.support.title': 'Поддерживать',
+    'about.whyChoose.items.support.description': 'Полная поддержка до, во время и после процесса переезда.',
 
     // Contacts
     'contacts.subtitle': 'Свяжитесь с нами для бесплатной консультации.',

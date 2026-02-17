@@ -4,58 +4,27 @@ import { Button } from '@/app/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight } from 'lucide-react';
 
+import { articles } from '../../data/data';
 import { Title } from '@/app/pages/Titles/Title';
 
 
 
 export function BlogPage() {
   const { t } = useLanguage();
-
-  const articles = [
-    {
-      title: 'Complete Guide to Digital Nomad Visa in Spain',
-      excerpt: 'Everything you need to know about the Spain Digital Nomad visa - requirements, process, and timeline.',
-      date: '2024-01-10',
-      category: 'Spain',
-    },
-    {
-      title: 'Startup Visa vs Digital Nomad: Which is Right for You?',
-      excerpt: 'Compare the key differences between startup and digital nomad visas to make the right choice.',
-      date: '2024-01-08',
-      category: 'Guides',
-    },
-    {
-      title: 'Tax Benefits of Portuguese D7 Visa',
-      excerpt: 'Learn about the NHR tax regime and other financial benefits available to D7 visa holders.',
-      date: '2024-01-05',
-      category: 'Portugal',
-    },
-    {
-      title: 'Moving to Germany as a Freelancer: Complete Checklist',
-      excerpt: 'Step-by-step guide to relocating to Germany on a freelance visa, including required documents.',
-      date: '2024-01-03',
-      category: 'Germany',
-    },
-    {
-      title: 'Family Relocation: Bringing Your Spouse and Children',
-      excerpt: 'How to include family members in your residence permit application and what documents you need.',
-      date: '2023-12-28',
-      category: 'Guides',
-    },
-    {
-      title: 'Life in Spain: First Month Essentials',
-      excerpt: 'What to expect and how to settle in during your first month living in Spain.',
-      date: '2023-12-25',
-      category: 'Spain',
-    },
-  ];
+      const processedArticles  = articles.map(article  => ({
+        title: t(article.title),           
+        excerpt: t(article.excerpt), 
+        category: t(article.category),
+        date: article.date, 
+        url: article.url,
+      }));  
 
   return (
     <div className="py-16 bg-white dark:bg-slate-950 min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Title title="nav.blog" text="blog.subtitle"/>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article, index) => (
+          {processedArticles.map((article, index) => (
             <Card key={index} className="hover:shadow-xl transition-shadow flex flex-col">
               <CardHeader>
                 <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-2">
@@ -69,12 +38,14 @@ export function BlogPage() {
                 <CardDescription>{article.excerpt}</CardDescription>
               </CardHeader>
               <CardFooter className="mt-auto">
-                {/* <button variant="ghost" >
-
-                </button> */}
-                <Link className="w-full justify-between">
-                  Read More
-                  <ArrowRight className="w-4 h-4" />
+                <Link 
+                  to={`/blog/${article.url}`}
+                  className="w-full flex items-center justify-between group"
+                >
+                  <button>
+                    {t('blog.card.button')}
+                  </button>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </CardFooter>
             </Card>

@@ -1,4 +1,4 @@
-import { Users, Briefcase, FileText, Globe } from 'lucide-react';
+import { Users, Briefcase, FileText, Globe, Target, Award, Globe2 } from 'lucide-react';
 
 // Сервисы
 export const servicesBase = [
@@ -99,5 +99,77 @@ export const countries = [
         flag: '🇺🇸',
         description: 'countries.usa.desc',
         programs: ['O-1 Visa', 'EB-2 NIW', 'E-2 Visa'],
+    },
+];
+
+export const articles = [ 
+    {
+        title: 'blog.card.title.spain',
+        excerpt: 'blog.card.excerpt.spain',
+        date: '2024-01-10',
+        category: 'blog.card.category.spain',
+        url: 'complete-guide-digital-nomad-visa-spain'
+    },
+    {
+        title: 'blog.card.title.visa-guides',
+        excerpt: 'blog.card.excerpt.visa-guides',
+        date: '2024-01-08',
+        category: 'blog.card.category.visa-guides',
+        url: 'startup-visa-vs-digital-nomad'
+    },
+    {
+        title: 'blog.card.title.Portugal',
+        excerpt: 'blog.card.excerpt.Portugal',
+        date: '2024-01-05',
+        category: 'blog.card.category.Portugal',
+        url: 'tax-benefits-portuguese-d7-visa'
+    },
+    {
+        title: 'blog.card.title.Germany',
+        excerpt: 'blog.card.excerpt.Germany',
+        date: '2024-01-03',
+        category: 'blog.card.category.Germany',
+        url: 'moving-to-germany-freelancer-checklist'
+    },
+    {
+        title: 'blog.card.title.famaly-guides',
+        excerpt: 'blog.card.excerpt.famaly-guides',
+        date: '2023-12-28',
+        category: 'blog.card.category.famaly-guides',
+        url: 'family-relocation-spouse-children'
+    },
+    {
+        title: 'blog.card.title.life-in-Spain',
+        excerpt: 'blog.card.excerpt.life-in-Spain',
+        date: '2023-12-25',
+        category: 'blog.card.category.life-in-Spain',
+        url: 'life-in-spain-first-month-essentials'
+    },
+];
+
+export const values = [
+    {
+        id: 1, 
+        icon: Target,
+        title: 'values.mission.title',
+        description: 'values.mission.description',
+    },
+    {
+        id: 2,
+        icon: Users,
+        title: 'values.team.title',
+        description: 'values.team.description',
+    },
+    {
+        id: 3,
+        icon: Award,
+        title: 'values.approach.title',
+        description: 'values.approach.description',
+    },
+    {
+        id: 4,
+        icon: Globe2,
+        title: 'values.expertise.title',
+        description: 'values.expertise.description',
     },
 ];
