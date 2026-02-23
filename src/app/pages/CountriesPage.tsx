@@ -30,7 +30,9 @@ export function CountriesPage() {
           {processedCountries.map((country, index) => (
             <Card key={index} className="hover:shadow-xl transition-shadow">
               <CardHeader>
-                <div className="text-6xl mb-4 text-center">{country.flag}</div>
+                <Link to={`/countries/${country.url}`}>
+                  <h2 className="text-4xl mb-4 text-center">{country.flag}</h2>
+                </Link>
                 <CardTitle className="text-2xl text-center">{country.name}</CardTitle>
                 <CardDescription className="text-center">{country.description}</CardDescription>
               </CardHeader>

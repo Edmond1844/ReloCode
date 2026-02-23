@@ -102,47 +102,87 @@ export const countries = [
     },
 ];
 
+// Blog
+export const blogFilter = [
+    {
+        id: "All",
+        name: "Все статьи",
+        type: "button",
+        filterType: "all",
+    },
+    {
+        id: "Guides",
+        name: "Гиды",
+        type: "button",
+        filterType: "guides",
+    },
+    {
+        id: "Spain",
+        name: "Испания",
+        type: "button",
+        filterType: "spain",
+    },
+    {
+        id: "Germany",
+        name: "Германия",
+        type: "button",
+        filterType: "germany",
+    },
+    {
+        id: "Portugal",
+        name: "Португалия",
+        type: "button",
+        filterType: "portugal",
+    },
+];
+
 export const articles = [ 
     {
         title: 'blog.card.title.spain',
         excerpt: 'blog.card.excerpt.spain',
         date: '2024-01-10',
-        category: 'blog.card.category.spain',
+        categoryName: 'blog.card.category.spain',
+        category: ['spain'],
         url: 'complete-guide-digital-nomad-visa-spain'
     },
     {
         title: 'blog.card.title.visa-guides',
         excerpt: 'blog.card.excerpt.visa-guides',
         date: '2024-01-08',
-        category: 'blog.card.category.visa-guides',
+        categoryName: 'blog.card.category.visa-guides',
+        category: ['guides'],
         url: 'startup-visa-vs-digital-nomad'
     },
     {
         title: 'blog.card.title.Portugal',
         excerpt: 'blog.card.excerpt.Portugal',
         date: '2024-01-05',
-        category: 'blog.card.category.Portugal',
+        categoryName: 'blog.card.category.Portugal',
+        category: ['portugal'],
         url: 'tax-benefits-portuguese-d7-visa'
     },
     {
         title: 'blog.card.title.Germany',
         excerpt: 'blog.card.excerpt.Germany',
         date: '2024-01-03',
-        category: 'blog.card.category.Germany',
+        categoryName: 'blog.card.category.Germany',
+        category: ['germany'],
         url: 'moving-to-germany-freelancer-checklist'
     },
     {
         title: 'blog.card.title.famaly-guides',
         excerpt: 'blog.card.excerpt.famaly-guides',
         date: '2023-12-28',
-        category: 'blog.card.category.famaly-guides',
+        categoryName: 'blog.card.category.famaly-guides',
+        category: ['guides'],
         url: 'family-relocation-spouse-children'
     },
     {
         title: 'blog.card.title.life-in-Spain',
         excerpt: 'blog.card.excerpt.life-in-Spain',
         date: '2023-12-25',
-        category: 'blog.card.category.life-in-Spain',
+        categoryName: 'blog.card.category.life-in-Spain',
+        category: ['spain'],
         url: 'life-in-spain-first-month-essentials'
     },
 ];
